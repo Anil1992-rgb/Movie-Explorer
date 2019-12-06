@@ -25,7 +25,7 @@ nav {
 label {
     font-size: larger;
     font-weight: bold;
-    color: green;
+    color: #26A69A;
 }
 
 #searchCard {
@@ -43,6 +43,7 @@ label {
     color: blue;
     border-left: 1px solid;
     padding: 10px;
+    background-color: lightblue;
 }
 
 .tmdbTitle {
@@ -52,4 +53,10 @@ label {
     color: red;
     border-right: 1px solid;
     padding: 10px;
+    background-color: lightblue;
+}
+
+
+/*#mainSec {
+    background-color: #26A69A;
 }
