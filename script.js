@@ -20,12 +20,12 @@ $("#searchBtn").click(function() {
         var rDate = response.results[0].release_date.substring(0, 4);
 
         $("#titleText").html(response.results[0].title + " (" + rDate + ")");
-        $(".tmdbTitle").html("<img src='" + "https://image.tmdb.org/t/p/w400" + tImg + "'>" + "<br>");
-        $("#tmdbTitle").html(response.results[0].overview);
+        $(".tmdbTitle").html("Rating: " + response.results[0].vote_average + "<br>" + "<img src='" + "https://image.tmdb.org/t/p/w400" + tImg + "'>" + "<br>");
+        $(".otherTitle").html("!PLACEHOLDER!");
     });
 });
 
-//https://image.tmdb.org/t/p/w500
+
 
 
 // $("#searchTerms").keypress(function(event) {

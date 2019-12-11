@@ -40,23 +40,23 @@ label {
     float: right;
     text-align: center;
     font-size: x-large;
-    color: blue;
-    border-left: 1px solid;
-    padding: 10px;
-    background-color: lightblue;
+    color: white;
+    background-color: black;
     display: none;
 }
 
 .tmdbTitle {
     float: left;
+    background-color: black;
     text-align: center;
     font-size: x-large;
-    color: black;
-    border-right: 1px solid;
-    padding: 5px;
-    margin: 10px;
-    background-color: lightblue;
+    color: white;
+    background-color: black;
     display: none;
+}
+
+img {
+    padding: 10px;
 }
 
 #titleText {
