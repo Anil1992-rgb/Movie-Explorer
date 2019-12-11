@@ -44,6 +44,7 @@ label {
     border-left: 1px solid;
     padding: 10px;
     background-color: lightblue;
+    display: none;
 }
 
 .tmdbTitle {
@@ -54,6 +55,7 @@ label {
     border-right: 1px solid;
     padding: 10px;
     background-color: lightblue;
+    display: none;
 }
 
 
