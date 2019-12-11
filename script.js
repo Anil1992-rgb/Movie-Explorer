@@ -1,9 +1,9 @@
-$("#searchBtn").click(function () {
+$("#searchBtn").click(function() {
     event.preventDefault();
 
     $(".tmdbTitle").css("display", "block");
     $(".otherTitle").css("display", "block");
-    
+
 
     var query = $("#searchTerms").val();
     console.log(query);
@@ -14,12 +14,23 @@ $("#searchBtn").click(function () {
         dataType: "json",
         url: queryURL,
         method: "GET"
-    }).then(function (response) {
+    }).then(function(response) {
         console.log(response);
-        
-        //$("#tmdbTitle").html(reponse.results[0].title);
-        $(".tmdbTitle").html(response.results[0].title);
+        var tImg = response.results[0].poster_path;
+        var rDate = response.results[0].release_date.substring(0, 4);
+
+        $("#titleText").html(response.results[0].title + " (" + rDate + ")");
+        $(".tmdbTitle").html("<img src='" + "https://image.tmdb.org/t/p/w400" + tImg + "'>" + "<br>");
+        $("#tmdbTitle").html(response.results[0].overview);
     });
 });
 
 //https://image.tmdb.org/t/p/w500
+
+
+// $("#searchTerms").keypress(function(event) {
+//     var key = event.which;
+//     if (key == 13) {
+//         callWeatherApi();
+//     }
+// });

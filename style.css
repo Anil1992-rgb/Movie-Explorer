@@ -51,11 +51,17 @@ label {
     float: left;
     text-align: center;
     font-size: x-large;
-    color: red;
+    color: black;
     border-right: 1px solid;
-    padding: 10px;
+    padding: 5px;
+    margin: 10px;
     background-color: lightblue;
     display: none;
+}
+
+#titleText {
+    text-align: center;
+    color: white;
 }
 
 
