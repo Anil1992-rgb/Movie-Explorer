@@ -40,13 +40,8 @@ function movieSearch() {
         
         var vidId = response.items[0].id.videoId;
         console.log(vidId);
-
-        $("#player").html("<iframe id=\"existing-iframe-example\"
-        width=\"640\" height=\"360\"
-        src=\"https://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1\"
-        frameborder=\"0\"
-        style=\"border: solid 4px #add8e6\"
-></iframe>");
+        
+        $('#existing-iframe-example').attr('src', "https://www.youtube.com/embed/" + vidId + "?enablejsapi=1");
     });
 
 
