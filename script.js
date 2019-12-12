@@ -37,10 +37,10 @@ function movieSearch() {
         method: "GET"
     }).then(function (response) {
         console.log(response);
-        
+
         var vidId = response.items[0].id.videoId;
         console.log(vidId);
-        
+
         $('#existing-iframe-example').attr('src', "https://www.youtube.com/embed/" + vidId + "?enablejsapi=1");
     });
 
