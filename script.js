@@ -12,12 +12,14 @@ function movieSearch() {
 
     var queryURL = "https://api.themoviedb.org/3/search/movie?api_key=0c2a1555ddc16a86620e39e37e74dfbb&language=en-US&query=" + query + "&page=1&include_adult=false";
     var gifyURL = "https://api.giphy.com/v1/gifs/random?api_key=SSrvqXS1WClbuJjHIrAVoCCxZmFC1RnH&tag=" + query;
+    var youtubeURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=" + query + "+official+trailer&key=AIzaSyAWa4yUxFgvUKLUUUenSeNtm4kWQxWulc0"
+
 
     $.ajax({
         dataType: "json",
         url: queryURL,
         method: "GET"
-    }).then(function(response) {
+    }).then(function (response) {
         console.log(response);
         var tImg = response.results[0].poster_path;
         var rDate = response.results[0].release_date.substring(0, 4);
@@ -29,14 +31,12 @@ function movieSearch() {
 
 
 
-    var youtubeURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=" + query + "+official+trailer&key=AIzaSyAWa4yUxFgvUKLUUUenSeNtm4kWQxWulc0"
-
 
     $.ajax({
         dataType: "json",
         url: youtubeURL,
         method: "GET"
-    }).then(function(response) {
+    }).then(function (response) {
         console.log(response);
 
         var vidId = response.items[0].id.videoId;
@@ -50,7 +50,7 @@ function movieSearch() {
         dataType: "json",
         url: gifyURL,
         method: "GET"
-    }).then(function(response) {
+    }).then(function (response) {
         console.log(response)
         var gifs = response.data.image_url;
         var img = $("<img>").attr("src", gifs);
@@ -71,14 +71,14 @@ function btnSearch() {
     $("#searchTerms").val("");
 };
 
-$("#searchTerms").keypress(function(event) {
+$("#searchTerms").keypress(function (event) {
     var key = event.which;
     if (key == 13) {
         btnSearch();
     }
 });
 
-$("#searchBtn").click(function() {
+$("#searchBtn").click(function () {
     event.preventDefault();
 
     btnSearch();
