@@ -10,9 +10,14 @@ function movieSearch() {
     var query = $("#searchTerms").val();
     console.log(query);
 
+    var youtubeKey = "AIzaSyCvbBehSj-wMrP5f7013aLXkCekyrpCFTY";
+
+    //  backup key
+    // var youtubeKey = "AIzaSyAWa4yUxFgvUKLUUUenSeNtm4kWQxWulc0";
+
     var queryURL = "https://api.themoviedb.org/3/search/movie?api_key=0c2a1555ddc16a86620e39e37e74dfbb&language=en-US&query=" + query + "&page=1&include_adult=false";
     var gifyURL = "https://api.giphy.com/v1/gifs/random?api_key=SSrvqXS1WClbuJjHIrAVoCCxZmFC1RnH&tag=" + query;
-    var youtubeURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=" + query + "+official+trailer&key=AIzaSyAWa4yUxFgvUKLUUUenSeNtm4kWQxWulc0"
+    var youtubeURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=" + query + "+official+trailer&key=" + youtubeKey;
 
 
     $.ajax({
