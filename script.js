@@ -68,7 +68,7 @@ function btnSearch() {
     blockAppear();
     movieSearch();
 
-    //  $("#searchTerms").val("");
+    $("#searchTerms").val("");
 };
 
 $("#searchTerms").keypress(function(event) {
